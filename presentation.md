@@ -5,7 +5,7 @@ ESCOLA DE ENGENHARIA
 
 PROGRAMA DE PÓS-GRADUAÇÃO EM ENGENHARIA DE PRODUÇÃO
 
-Redes Neurais Aplicadas à Modelagem de Instrumentos Acústicos para Síntese Sonora em Tempo Real
+**Redes Neurais Aplicadas à Modelagem de Instrumentos Acústicos para Síntese Sonora em Tempo Real**
 
 por Carlos Tarjano 
 

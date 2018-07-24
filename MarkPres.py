@@ -10,6 +10,15 @@ html = '''<!DOCTYPE html>
 
 '''
 
+def checkstyle(text):
+  if "**" in text:
+    text = "<b> " + text.replace("**","").strip() + " </b>"
+  if "*" in text:
+    text = "<i> " + text.replace("*","").strip() + " </i>"
+  if "~~" in text:
+    text = "<del> " + text.replace("~~","").strip() + " </del>"
+  return text
+
 currentsection = "<section> \n"
 
 
@@ -21,65 +30,57 @@ for line in md:
     continue
     
   if "######" in line:
-    currentsection += "<h6> " + line.replace("######","").strip() + " </h6> \n"
+    currentsection += "      <h6> " + checkstyle(line.replace("######","").strip()) + " </h6> \n"
     continue
 
   if "#####" in line:
-    currentsection += "<h5> " + line.replace("#####","").strip() + " </h5> \n"
+    currentsection += "     <h5> " + checkstyle(line.replace("#####","").strip()) + " </h5> \n"
     continue
 
   if "####" in line:
-    currentsection += "<h4> " + line.replace("####","").strip() + " </h4> \n"
+    currentsection += "    <h4> " + checkstyle(line.replace("####","").strip()) + " </h4> \n"
     continue
 
   if "###" in line:
-    currentsection += "<h3> " + line.replace("###","").strip() + " </h3> \n"
+    currentsection += "   <h3> " + checkstyle(line.replace("###","").strip()) + " </h3> \n"
     continue
 
   if "##" in line:
-    currentsection += "<h2> " + line.replace("##","").strip() + " </h2> \n"
+    currentsection += "  <h2> " + checkstyle(line.replace("##","").strip()) + " </h2> \n"
     continue
 
   if "#" in line:
-    currentsection += "<h1> " + line.replace("#","").strip() + " </h1> \n"
+    currentsection += " <h1> " + checkstyle(line.replace("#","").strip()) + " </h1> \n"
     continue
 
   if "![" in line:
     [caption, path] = line.strip("![)\n").split("](")
     term = path.split('.')[-1]
-    if term.upper() in ["PNG", "JPG", "JPEG"]:
-      currentsection += '''<figure> <img src="''' + path + '''" alt="''' + caption + "\"/> </figure> \n"
+    if term.upper() in ["PNG", "JPG", "JPEG", "GIF", "BMP"]:
+      currentsection += ''' <figure> <img src="''' + path + '''" alt="''' + caption + "\"/> </figure> \n"
+      currentsection += " <p> <em> " + checkstyle(caption) + " </em> </p> \n"
       continue
+
     if term.upper() in ["MP4", "WEBM"]:
-      currentsection += '''<video controls> <source src="''' + path + '''" type=video/''' + term + "> </video> \n"
+      currentsection += ''' <video controls> <source src="''' + path + '''" type=video/''' + term + "> </video> \n"
+      currentsection += " <p> <em> " + checkstyle(caption) + " </em> </p> \n"
+      continue
 
-
-    # print(caption, path)
-    continue
-
-
-
+    if term.upper() in ["OGG", "WAV", "FLAC"]:
+      currentsection += ''' <audio controls> <source src="''' + path + '''" type=audio/''' + term + "> </audio> \n"
+      currentsection += " <p> <em> " + checkstyle(caption) + " </em> </p> \n"
+    
 
   if "---" in line:
     html += currentsection + "</section> \n \n"
     currentsection = "<section> \n"
     continue
 
-  currentsection += "<p> " + line.strip() + " </p> \n"
+  currentsection += "       <p> " + checkstyle(line.strip()) + " </p> \n"
   
 
 html += '</body>\n<script src="MarkPres.js"></script>\n</html>'
 
-
 print(html)
 
 save = open(markdown_path.replace("md","html"), 'w', encoding='utf8').writelines(html) ## !encoding
-
-
-
-
-
-
-
-
-# filenames = [f for f in os.listdir('./') if '.md' in f]
