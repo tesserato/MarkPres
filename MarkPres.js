@@ -1,21 +1,28 @@
-var FontMultiplier = 0.0;
-var FontSteps = 0.1
+/* <><><><> GLOBAL VARS <><><><> */
+var loading = document.getElementById("splash");
+var FontSteps = 0.1;
+var printing = false;
 var CurrentSlide = 0;
 var slides = document.getElementsByTagName("section");
 var n = slides.length;
 
-function draw(){
-  slides[CurrentSlide].style.opacity = 0;
-  FontMultiplier = 0.0;
-  document.documentElement.style.setProperty("--font_multiplier", FontMultiplier);
-  while (slides[CurrentSlide].clientHeight < document.body.clientHeight){
-    FontMultiplier += FontSteps
-    document.documentElement.style.setProperty("--font_multiplier", FontMultiplier);
-  }
-  FontMultiplier -= FontSteps
-  document.documentElement.style.setProperty("--font_multiplier", FontMultiplier);
 
-  slides[CurrentSlide].style.opacity = 1;
+/* <><><><> FUNCTIONS <><><><> */
+
+function recalculate(){
+  for (i = 0; i < n; i++) {
+    slides[i].style.display = "block";
+    FontMultiplier = 0.0;
+    document.documentElement.style.setProperty("--font_multiplier_" + i, FontMultiplier);
+    while (slides[i].clientHeight < window.innerHeight * 0.90){
+      FontMultiplier += FontSteps
+      document.documentElement.style.setProperty("--font_multiplier_" + i, FontMultiplier);
+    }
+    FontMultiplier -= FontSteps
+    document.documentElement.style.setProperty("--font_multiplier_" + i, FontMultiplier);
+    slides[i].style.display = "none";
+  }
+  slides[CurrentSlide].style.display = "block";
 }
 
 function PassSlide(inc){
@@ -26,27 +33,9 @@ function PassSlide(inc){
   slides[CurrentSlide].style.display = "block";
 }
 
-for (i = 0; i < n; i++) {
-  slides[i].style.display = "none";
-}
-slides[CurrentSlide].style.display = "block";
-draw()
 
-window.onresize = function(){
-  draw()
-};
+/* <><><><> CREATING DOM ELEMENTS <><><><> */
 
-document.onkeydown = function(e){
-  if (e.key=='ArrowRight'|| e.key=='Enter'|| e.key==' ') {
-    PassSlide(1)
-    draw()
-  }
-  if (e.key=='ArrowLeft') {
-    PassSlide(-1)
-    draw()
-  }
-
-};
 
 var l_div = document.createElement("div");
 l_div.style.zIndex = 2;
@@ -68,7 +57,6 @@ l_div.onmouseleave = function(e){
 }
 l_div.onmousedown = function(e){
   PassSlide(-1);
-  draw();
 }
 document.body.appendChild(l_div);
 
@@ -95,6 +83,63 @@ r_div.onmouseleave = function(e){
 }
 r_div.onmousedown = function(e){
   PassSlide(+1);
-  draw();
 }
 document.body.appendChild(r_div);
+
+
+/* <><><><> EVENTS <><><><> */
+
+window.onresize = function(){
+  // loading.style.visibility = "visible";
+  recalculate();
+  // loading.style.visibility = "hidden";
+  if (printing == true){
+    for (i = 0; i < n; i++) {
+      slides[i].style.display = "block";
+    }
+  }
+}
+
+window.onload = function(){
+  recalculate();
+  loading.style.visibility = "hidden";
+}
+
+document.onkeydown = function(e){
+  if (e.key=='ArrowRight'|| e.key=='Enter'|| e.key==' ') {
+    PassSlide(1)
+  }
+  if (e.key=='ArrowLeft') {
+    PassSlide(-1)
+  }
+}
+
+window.onbeforeprint = function() {
+  printing = true;
+  for (i = 0; i < n; i++) {
+    slides[i].style.display = "block";
+    FontMultiplier = 0.0;
+    document.documentElement.style.setProperty("--font_multiplier_" + i, FontMultiplier);
+    while (slides[i].clientHeight < ((210 - 5) * 72) / 25.4 || slides[i].clientHeight < ((297 - 5) * 72) / 25.4){
+      FontMultiplier += 0.01
+      document.documentElement.style.setProperty("--font_multiplier_" + i, FontMultiplier);
+    }
+    FontMultiplier -= FontSteps
+    document.documentElement.style.setProperty("--font_multiplier_" + i, FontMultiplier);
+    slides[i].style.display = "none";
+  slides[CurrentSlide].style.display = "block";
+  }
+  
+  for (i = 0; i < n; i++) {
+    slides[i].style.display = "block";
+  }
+};
+
+window.onafterprint = function() {
+  printing = false;
+  recalculate();
+  for (i = 0; i < n; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[CurrentSlide].style.display = "block";
+};

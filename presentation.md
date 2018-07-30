@@ -80,3 +80,25 @@ Mapear o estado da arte da modelagem acústica “tradicional”
 Potencial de inclusão de teoria acústica na eficiência
 
 -----------------------
+
+# Teste audio
+
+## Motivação:
+
+ANNs aplicadas com sucesso em várias áreas
+
+Estado da arte em áreas afins
+
+
+![teste](media/440.wav)
+
+
+## Objetivo: Elaborar um modelo baseado em ANNs para emulação de instrumentos em tempo real
+
+Mapear o estado da arte em áreas (direta ou indiretamente) correlatas
+
+Mapear o estado da arte da modelagem acústica “tradicional”
+
+Potencial de inclusão de teoria acústica na eficiência
+
+-----------------------

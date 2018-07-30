@@ -1,0 +1,75 @@
+:root{
+  --background_color: #2D3235;
+  --foreground_color: #202426;
+}
+
+@media print {
+  section {
+    page-break-after: always;
+  }
+  html, body{
+  height: 91vh;
+  width: 95vw;
+  }
+}
+
+@font-face {
+  font-family: Medium;
+  src:url(media/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: Light;
+  src:url(media/Montserrat-Light.ttf);
+}
+
+@font-face {
+  font-family: Bold;
+  src:url(media/Montserrat-Bold.ttf);
+}
+
+html, body{
+  height: 91vh;
+  width: 95vw;
+  background: var(--background_color);
+}
+
+body{
+  border-style: dashed;
+  padding-left: 2%;
+  color: rgb(255, 255, 255);
+}
+
+img, video{
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 50%;
+  background: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Medium;
+}
+
+p{
+  font-family: Light;
+}
+
+.btn{
+  filter: blur(1px)
+}
+
+.btn{
+  transition-property: width, left;
+  transition-duration: 0.5s;
+}
+
+section{
+  border-style: solid;
+}
+
+section{
+  transition-property: opacity;
+  transition-duration: 1s;
+}

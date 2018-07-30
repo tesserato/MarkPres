@@ -1,8 +1,67 @@
+
 :root{
-  --font_multiplier:0.1;
   --background_color: #2D3235;
   --foreground_color: #202426;
+  --font_multiplier_0:1.0;
+  --font_multiplier_1:1.0;
+  --font_multiplier_2:1.0;
+  --font_multiplier_3:1.0;
+  --font_multiplier_4:1.0;
 }
+.s0 {
+  font-size: calc(var(--font_multiplier_0) * 1vw);
+}
+.s0>h1, .s0>h2, .s0>h3, .s0>h4, .s0>h5, .s0>h6 {
+  text-indent: calc(var(--font_multiplier_0) * 1vw);
+}
+.s0>p {
+  text-indent: calc(var(--font_multiplier_0) * 2vw);
+}
+
+.s1 {
+  font-size: calc(var(--font_multiplier_1) * 1vw);
+}
+.s1>h1, .s1>h2, .s1>h3, .s1>h4, .s1>h5, .s1>h6 {
+  text-indent: calc(var(--font_multiplier_1) * 1vw);
+}
+.s1>p {
+  text-indent: calc(var(--font_multiplier_1) * 2vw);
+}
+
+.s2 {
+  font-size: calc(var(--font_multiplier_2) * 1vw);
+}
+.s2>h1, .s2>h2, .s2>h3, .s2>h4, .s2>h5, .s2>h6 {
+  text-indent: calc(var(--font_multiplier_2) * 1vw);
+}
+.s2>p {
+  text-indent: calc(var(--font_multiplier_2) * 2vw);
+}
+
+.s3 {
+  font-size: calc(var(--font_multiplier_3) * 1vw);
+}
+.s3>h1, .s3>h2, .s3>h3, .s3>h4, .s3>h5, .s3>h6 {
+  text-indent: calc(var(--font_multiplier_3) * 1vw);
+}
+.s3>p {
+  text-indent: calc(var(--font_multiplier_3) * 2vw);
+}
+
+.s4 {
+  font-size: calc(var(--font_multiplier_4) * 1vw);
+}
+.s4>h1, .s4>h2, .s4>h3, .s4>h4, .s4>h5, .s4>h6 {
+  text-indent: calc(var(--font_multiplier_4) * 1vw);
+}
+.s4>p {
+  text-indent: calc(var(--font_multiplier_4) * 2vw);
+}
+
+
+
+/* static */
+
 
 @font-face {
   font-family: Medium;
@@ -20,34 +79,18 @@
 }
 
 html, body{
-  height: 91vh;
-  width: 95vw;
   background: var(--background_color);
-}
-
-body{
-  padding-left: 2%;
-  color: rgb(255, 255, 255);
-}
-
-img, video{
-  width: auto;
-  height: auto;
-  max-width: 90%;
-  max-height: 50%;
-  background: white;
+  color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Medium;
-  font-size: calc(var(--font_multiplier) * 1vw);
-  text-indent: calc(var(--font_multiplier) * 1vw);
+  font-size: inherit;
 }
 
 p{
   font-family: Light;
-  font-size: calc(var(--font_multiplier) * 1vw);
-  text-indent: calc(var(--font_multiplier) * 2vw);
+  font-size: inherit;
 }
 
 .btn{
@@ -59,7 +102,72 @@ p{
   transition-duration: 0.5s;
 }
 
+@keyframes op {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
 section{
-  transition-property: opacity;
-  transition-duration: 1s;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  animation-name: op;
+  animation-duration: 1s;
+}
+
+img, video, audio{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90vw;
+  max-height: 50vh;
+}
+
+@media print{
+  section{
+    page-break-after: always;
+  }
+}
+
+#splash {
+  z-index: 1;
+  text-align: center;
+  font-family: Bold;
+  background: black;
+  position: fixed;
+  padding-top: 30vh;
+  font-size: 5vh;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.signal {
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 30px;
+  height: 30px;
+  left: 50%;
+  margin: -15px 0 0 -15px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  width: 30px;
+
+  animation: pulsate 1s ease-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(.1);
+    opacity: 0.0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
 }
