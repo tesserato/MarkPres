@@ -15,90 +15,245 @@ Niterói, 31 / 07 / 2018
 
 ---------------
 
+
 # Introdução
 
+## Objetivo: Elaborar um modelo baseado em ANNs para emulação de instrumentos em tempo real
+
+Mapear o estado da arte da aplicação de ANNs em áreas correlatas
+
+Mapear o estado da arte da modelagem acústica “tradicional”
+
+Potencial de inclusão de teoria acústica na eficiência
+
 ## Motivação:
 
 ANNs aplicadas com sucesso em várias áreas
 
 Estado da arte em áreas afins
 
-Poucos trabalhos relacionados a síntese sonora (nenhum em tempo real)
+Poucos trabalhos relacionados a síntese sonora via ANNs (nenhum em tempo real)
 
-Indústria de DMI “estagnada”
-
-## Objetivo: Elaborar um modelo baseado em ANNs para emulação de instrumentos em tempo real
-
-Mapear o estado da arte em áreas (direta ou indiretamente) correlatas
-
-Mapear o estado da arte da modelagem acústica “tradicional”
-
-Potencial de inclusão de teoria acústica na eficiência
+Indústria de DMI “estagnada” e hermética
 
 ---------------
 
 
-# Teste Imagem
+# Introdução
 
-## Motivação:
+## Escopo:
 
-ANNs aplicadas com sucesso em várias áreas
+Emulação de instrumentos acústicos
 
-Estado da arte em áreas afins
+Excitação impulsiva
 
-![teste](media/35.png)
+Tempo real
 
-## Objetivo: Elaborar um modelo baseado em ANNs para emulação de instrumentos em tempo real
-
-Mapear o estado da arte em áreas (direta ou indiretamente) correlatas
-
-Mapear o estado da arte da modelagem acústica “tradicional”
-
-Potencial de inclusão de teoria acústica na eficiência
+Arquiteturas Neurais consolidadas na literatura
 
 ---------------
 
 
-# Teste video
+# Revisão Bibliográfica
 
-## Motivação:
+## ANNs:
 
-ANNs aplicadas com sucesso em várias áreas
+Wavenet – bons resultados para voz (Magenta)
 
-Estado da arte em áreas afins
+Alguns trabalhos experimentais no princípio
 
+## Modelagem Acústica Tradicional:
 
-![teste](media/DigitalWaveguide.webm)
+Domínio da Frequência (Modelagem Espectral)
 
+Domínio do Tempo (Modelagem Física)
 
-## Objetivo: Elaborar um modelo baseado em ANNs para emulação de instrumentos em tempo real
+## Principais métodos de Modelagem Física:
 
-Mapear o estado da arte em áreas (direta ou indiretamente) correlatas
+![Digital Waveguide | Diferenças Finitas](media/DigitalWaveguides_FiniteDifferences.png)
 
-Mapear o estado da arte da modelagem acústica “tradicional”
-
-Potencial de inclusão de teoria acústica na eficiência
-
------------------------
-
-# Teste audio
-
-## Motivação:
-
-ANNs aplicadas com sucesso em várias áreas
-
-Estado da arte em áreas afins
+---------------
 
 
-![teste](media/440.wav)
+# Referencial Teórico
+
+## Redes Neurais - Arquiteturas
+
+![Arquiteturas](media/arqs.png)
 
 
-## Objetivo: Elaborar um modelo baseado em ANNs para emulação de instrumentos em tempo real
+---------------
 
-Mapear o estado da arte em áreas (direta ou indiretamente) correlatas
+# Referencial Teórico
 
-Mapear o estado da arte da modelagem acústica “tradicional”
+## Transformada Discreta de Fourier
 
-Potencial de inclusão de teoria acústica na eficiência
+![Transformada Discreta de Fourier](media/dft.png)
 
------------------------
+
+---------------
+
+# Referencial Teórico
+
+## DFT - SIMETRIA
+
+![Simetria Transformada de Fourier](media/simetria.png)
+
+---------------
+
+
+
+# Referencial Teórico
+
+## DFT - Decaimento domínio da frequência x domínio do tempo
+
+![Simetria Transformada de Fourier](media/fourierDecay.png)
+
+---------------
+
+# Metodologia
+
+## Busca de amostras sonoras:
+
+Variedade, Qualidade, Licença, Organização
+
+## Modelos Tradicionais
+
+Implementação e análise
+
+## Domínio do tempo:
+
+Redes Densas – Grid Search (Arquitetura, Função de ativação, Função de Otimização)
+
+Redes Recorrentes + Convolução alisada
+
+## Domínio da Frequência:
+
+Busca por representações simplificadas
+
+Aplicação direta de redes Densas | Aplicação fisicamente informada
+
+
+---------------
+# Metodologia - Modelos Tradicionais
+
+![Digital Waveguide](media/DigitalWaveguide.webm)
+
+---------------
+
+# Metodologia - Modelos Tradicionais
+
+![Diferenças Finitas](media/FiniteDifference.webm)
+
+---------------
+
+
+# Metodologia - Domínio do tempo:
+
+![Convolução Alisada](media/smoothstep.png)
+
+---------------
+# Resultados - Domínio do tempo:
+
+![Descontinuidades](media/descontinuidades.png)
+
+
+---------------
+# Resultados - Domínio do tempo:
+
+![Alvo](media/1-1-1.wav)
+
+![Resultado](media/beating_1.0_1.0_1.0_raw.wav)
+
+![Resultado Alisado](media/beating_1.0_1.0_1.0_alisado.wav)
+
+---------------
+# Metodologia - Domínio da Frequência:
+
+Método direto para sons mal comportados
+
+Método fisicamente informado para sons harmônicos
+
+![Espectros de frequência: Não harmônico x harmônico](media/crashxpiano.png)
+
+---------------
+# Metodologia - Domínio da Frequência - Método Direto:
+
+caixa, contratempo,tambores - 120 008 neurons, 1.4 Mb.
+
+pratos - 360 008 neurons, 9 Mb.
+
+redes com uma camada oculta
+
+![Dinâmica Caixa - Centro para Borda](media/caixa_centro_para_bordas.wav)
+
+![Dinâmica Contratempo - Fraco para Forte](media/contratempo_piano_para_forte.wav)
+
+---------------
+# Metodologia - Domínio da Frequência - Método Fisicamente Informado:
+
+![Identificação de picos](media/Peaks.png)
+
+![Identificação de decaimentos](media/frequencydecay.png)
+
+Redes: amplitudes e decaimentos - 5 301 neurons, 100kb | frequências 261 neurons, 50 kb
+
+---------------
+# Metodologia - Domínio da Frequência - Método Fisicamente Informado:
+
+![Amostra Piano - tecla 01 A0](media/piano_1.wav)
+
+![Amostra Piano - tecla 49 A4](media/piano_49.wav)
+
+![Amostra Piano - tecla 88 C8](media/piano_88.wav)
+
+---------------
+
+# Metodologia - Domínio da Frequência - Modelo Final:
+
+![Modelo final](media/modelofinal.png)
+
+---------------
+
+# Resultados - Domínio da Frequência:
+
+## Método Direto:
+
+Funcional para sons mal comportados (percussão)
+
+## Método Fisicamente informado:
+
+Ideal para instrumentos harmônicos
+
+Eficiência 10x maior do que Digital Waveguides (implementação em Python)
+
+Verossimilhança maior do que o método das diferenças finitas
+
+---------------
+
+# Conclusão
+
+## Contribuições:
+
+Apresenta um modelo mais eficiente para modelagem acústica
+
+Aponta uma nova área de pesquisa, na interseção entre acústica e redes neurais
+
+Apresenta alguns potenciais e limitações dessa área, no domínio do tempo e da frequência
+
+Interpretação geométrica da simetria da transformada discreta de Fourier aplicada à sinais no domínio real.
+
+Relação entre envelopes (domínio do tempo) e formato das elevações (domínio da frequência)
+
+## Oportunidades de Pesquisa:
+
+Desenvolvimento de um método de extração de envelopes (possivelmente analítico)
+
+Retomar autoencoders com esse método (transferência de estilo)
+
+Utilizar Diferenças Finitas para treinar um algoritmo “Neural Waveguides”
+
+Utilizar ANNs no lugar de funções utilizadas em modelos acústicos mais elaborados
+
+Paralelizar as redes
+---------------

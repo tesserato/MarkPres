@@ -176,17 +176,20 @@ section{
 }
 
 img, video, audio{
+  background: white;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 90vw;
-  max-height: 50vh;
 }
 
 @media print{
   section{
     page-break-after: always;
   }
+}
+
+.caption {
+  text-align: center;
 }
 
 #splash {

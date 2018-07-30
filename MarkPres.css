@@ -7,6 +7,22 @@
   --font_multiplier_2:1.0;
   --font_multiplier_3:1.0;
   --font_multiplier_4:1.0;
+  --font_multiplier_5:1.0;
+  --font_multiplier_6:1.0;
+  --font_multiplier_7:1.0;
+  --font_multiplier_8:1.0;
+  --font_multiplier_9:1.0;
+  --font_multiplier_10:1.0;
+  --font_multiplier_11:1.0;
+  --font_multiplier_12:1.0;
+  --font_multiplier_13:1.0;
+  --font_multiplier_14:1.0;
+  --font_multiplier_15:1.0;
+  --font_multiplier_16:1.0;
+  --font_multiplier_17:1.0;
+  --font_multiplier_18:1.0;
+  --font_multiplier_19:1.0;
+  --font_multiplier_20:1.0;
 }
 .s0 {
   font-size: calc(var(--font_multiplier_0) * 1vw);
@@ -56,6 +72,166 @@
 }
 .s4>p {
   text-indent: calc(var(--font_multiplier_4) * 2vw);
+}
+
+.s5 {
+  font-size: calc(var(--font_multiplier_5) * 1vw);
+}
+.s5>h1, .s5>h2, .s5>h3, .s5>h4, .s5>h5, .s5>h6 {
+  text-indent: calc(var(--font_multiplier_5) * 1vw);
+}
+.s5>p {
+  text-indent: calc(var(--font_multiplier_5) * 2vw);
+}
+
+.s6 {
+  font-size: calc(var(--font_multiplier_6) * 1vw);
+}
+.s6>h1, .s6>h2, .s6>h3, .s6>h4, .s6>h5, .s6>h6 {
+  text-indent: calc(var(--font_multiplier_6) * 1vw);
+}
+.s6>p {
+  text-indent: calc(var(--font_multiplier_6) * 2vw);
+}
+
+.s7 {
+  font-size: calc(var(--font_multiplier_7) * 1vw);
+}
+.s7>h1, .s7>h2, .s7>h3, .s7>h4, .s7>h5, .s7>h6 {
+  text-indent: calc(var(--font_multiplier_7) * 1vw);
+}
+.s7>p {
+  text-indent: calc(var(--font_multiplier_7) * 2vw);
+}
+
+.s8 {
+  font-size: calc(var(--font_multiplier_8) * 1vw);
+}
+.s8>h1, .s8>h2, .s8>h3, .s8>h4, .s8>h5, .s8>h6 {
+  text-indent: calc(var(--font_multiplier_8) * 1vw);
+}
+.s8>p {
+  text-indent: calc(var(--font_multiplier_8) * 2vw);
+}
+
+.s9 {
+  font-size: calc(var(--font_multiplier_9) * 1vw);
+}
+.s9>h1, .s9>h2, .s9>h3, .s9>h4, .s9>h5, .s9>h6 {
+  text-indent: calc(var(--font_multiplier_9) * 1vw);
+}
+.s9>p {
+  text-indent: calc(var(--font_multiplier_9) * 2vw);
+}
+
+.s10 {
+  font-size: calc(var(--font_multiplier_10) * 1vw);
+}
+.s10>h1, .s10>h2, .s10>h3, .s10>h4, .s10>h5, .s10>h6 {
+  text-indent: calc(var(--font_multiplier_10) * 1vw);
+}
+.s10>p {
+  text-indent: calc(var(--font_multiplier_10) * 2vw);
+}
+
+.s11 {
+  font-size: calc(var(--font_multiplier_11) * 1vw);
+}
+.s11>h1, .s11>h2, .s11>h3, .s11>h4, .s11>h5, .s11>h6 {
+  text-indent: calc(var(--font_multiplier_11) * 1vw);
+}
+.s11>p {
+  text-indent: calc(var(--font_multiplier_11) * 2vw);
+}
+
+.s12 {
+  font-size: calc(var(--font_multiplier_12) * 1vw);
+}
+.s12>h1, .s12>h2, .s12>h3, .s12>h4, .s12>h5, .s12>h6 {
+  text-indent: calc(var(--font_multiplier_12) * 1vw);
+}
+.s12>p {
+  text-indent: calc(var(--font_multiplier_12) * 2vw);
+}
+
+.s13 {
+  font-size: calc(var(--font_multiplier_13) * 1vw);
+}
+.s13>h1, .s13>h2, .s13>h3, .s13>h4, .s13>h5, .s13>h6 {
+  text-indent: calc(var(--font_multiplier_13) * 1vw);
+}
+.s13>p {
+  text-indent: calc(var(--font_multiplier_13) * 2vw);
+}
+
+.s14 {
+  font-size: calc(var(--font_multiplier_14) * 1vw);
+}
+.s14>h1, .s14>h2, .s14>h3, .s14>h4, .s14>h5, .s14>h6 {
+  text-indent: calc(var(--font_multiplier_14) * 1vw);
+}
+.s14>p {
+  text-indent: calc(var(--font_multiplier_14) * 2vw);
+}
+
+.s15 {
+  font-size: calc(var(--font_multiplier_15) * 1vw);
+}
+.s15>h1, .s15>h2, .s15>h3, .s15>h4, .s15>h5, .s15>h6 {
+  text-indent: calc(var(--font_multiplier_15) * 1vw);
+}
+.s15>p {
+  text-indent: calc(var(--font_multiplier_15) * 2vw);
+}
+
+.s16 {
+  font-size: calc(var(--font_multiplier_16) * 1vw);
+}
+.s16>h1, .s16>h2, .s16>h3, .s16>h4, .s16>h5, .s16>h6 {
+  text-indent: calc(var(--font_multiplier_16) * 1vw);
+}
+.s16>p {
+  text-indent: calc(var(--font_multiplier_16) * 2vw);
+}
+
+.s17 {
+  font-size: calc(var(--font_multiplier_17) * 1vw);
+}
+.s17>h1, .s17>h2, .s17>h3, .s17>h4, .s17>h5, .s17>h6 {
+  text-indent: calc(var(--font_multiplier_17) * 1vw);
+}
+.s17>p {
+  text-indent: calc(var(--font_multiplier_17) * 2vw);
+}
+
+.s18 {
+  font-size: calc(var(--font_multiplier_18) * 1vw);
+}
+.s18>h1, .s18>h2, .s18>h3, .s18>h4, .s18>h5, .s18>h6 {
+  text-indent: calc(var(--font_multiplier_18) * 1vw);
+}
+.s18>p {
+  text-indent: calc(var(--font_multiplier_18) * 2vw);
+}
+
+.s19 {
+  font-size: calc(var(--font_multiplier_19) * 1vw);
+}
+.s19>h1, .s19>h2, .s19>h3, .s19>h4, .s19>h5, .s19>h6 {
+  text-indent: calc(var(--font_multiplier_19) * 1vw);
+}
+.s19>p {
+  text-indent: calc(var(--font_multiplier_19) * 2vw);
+}
+
+.s20 {
+  font-size: calc(var(--font_multiplier_20) * 1vw);
+}
+.s20>h1, .s20>h2, .s20>h3, .s20>h4, .s20>h5, .s20>h6 {
+  text-indent: calc(var(--font_multiplier_20) * 1vw);
+}
+.s20>p {
+  text-indent: calc(var(--font_multiplier_20) * 2vw);
 }
 
 
@@ -116,17 +292,20 @@ section{
 }
 
 img, video, audio{
+  background: white;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 90vw;
-  max-height: 50vh;
 }
 
 @media print{
   section{
     page-break-after: always;
   }
+}
+
+.caption {
+  text-align: center;
 }
 
 #splash {

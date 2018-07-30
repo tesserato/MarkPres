@@ -25,54 +25,183 @@
  
 <section class="s1"> 
  <h1> Introdução </h1> 
+  <h2> Objetivo: Elaborar um modelo baseado em ANNs para emulação de instrumentos em tempo real </h2> 
+       <p> Mapear o estado da arte da aplicação de ANNs em áreas correlatas </p> 
+       <p> Mapear o estado da arte da modelagem acústica “tradicional” </p> 
+       <p> Potencial de inclusão de teoria acústica na eficiência </p> 
   <h2> Motivação: </h2> 
        <p> ANNs aplicadas com sucesso em várias áreas </p> 
        <p> Estado da arte em áreas afins </p> 
-       <p> Poucos trabalhos relacionados a síntese sonora (nenhum em tempo real) </p> 
-       <p> Indústria de DMI “estagnada” </p> 
-  <h2> Objetivo: Elaborar um modelo baseado em ANNs para emulação de instrumentos em tempo real </h2> 
-       <p> Mapear o estado da arte em áreas (direta ou indiretamente) correlatas </p> 
-       <p> Mapear o estado da arte da modelagem acústica “tradicional” </p> 
-       <p> Potencial de inclusão de teoria acústica na eficiência </p> 
+       <p> Poucos trabalhos relacionados a síntese sonora via ANNs (nenhum em tempo real) </p> 
+       <p> Indústria de DMI “estagnada” e hermética </p> 
 </section> 
  
 <section class="s2"> 
- <h1> Teste Imagem </h1> 
-  <h2> Motivação: </h2> 
-       <p> ANNs aplicadas com sucesso em várias áreas </p> 
-       <p> Estado da arte em áreas afins </p> 
- <figure> <img src="media/35.png" alt="teste"/> </figure> 
- <p class="caption"> teste </p> 
-  <h2> Objetivo: Elaborar um modelo baseado em ANNs para emulação de instrumentos em tempo real </h2> 
-       <p> Mapear o estado da arte em áreas (direta ou indiretamente) correlatas </p> 
-       <p> Mapear o estado da arte da modelagem acústica “tradicional” </p> 
-       <p> Potencial de inclusão de teoria acústica na eficiência </p> 
+ <h1> Introdução </h1> 
+  <h2> Escopo: </h2> 
+       <p> Emulação de instrumentos acústicos </p> 
+       <p> Excitação impulsiva </p> 
+       <p> Tempo real </p> 
+       <p> Arquiteturas Neurais consolidadas na literatura </p> 
 </section> 
  
 <section class="s3"> 
- <h1> Teste video </h1> 
-  <h2> Motivação: </h2> 
-       <p> ANNs aplicadas com sucesso em várias áreas </p> 
-       <p> Estado da arte em áreas afins </p> 
- <video controls> <source src="media/DigitalWaveguide.webm" type=video/webm> </video> 
- <p class="caption"> teste </p> 
-  <h2> Objetivo: Elaborar um modelo baseado em ANNs para emulação de instrumentos em tempo real </h2> 
-       <p> Mapear o estado da arte em áreas (direta ou indiretamente) correlatas </p> 
-       <p> Mapear o estado da arte da modelagem acústica “tradicional” </p> 
-       <p> Potencial de inclusão de teoria acústica na eficiência </p> 
+ <h1> Revisão Bibliográfica </h1> 
+  <h2> ANNs: </h2> 
+       <p> Wavenet – bons resultados para voz (Magenta) </p> 
+       <p> Alguns trabalhos experimentais no princípio </p> 
+  <h2> Modelagem Acústica Tradicional: </h2> 
+       <p> Domínio da Frequência (Modelagem Espectral) </p> 
+       <p> Domínio do Tempo (Modelagem Física) </p> 
+  <h2> Principais métodos de Modelagem Física: </h2> 
+ <figure> <img src="media/DigitalWaveguides_FiniteDifferences.png" alt="Digital Waveguide | Diferenças Finitas"/> </figure> 
+ <p class="caption"> Digital Waveguide | Diferenças Finitas </p> 
 </section> 
  
 <section class="s4"> 
- <h1> Teste audio </h1> 
-  <h2> Motivação: </h2> 
-       <p> ANNs aplicadas com sucesso em várias áreas </p> 
-       <p> Estado da arte em áreas afins </p> 
- <audio controls> <source src="media/440.wav" type=audio/wav> </audio> 
- <p class="caption"> teste </p> 
-  <h2> Objetivo: Elaborar um modelo baseado em ANNs para emulação de instrumentos em tempo real </h2> 
-       <p> Mapear o estado da arte em áreas (direta ou indiretamente) correlatas </p> 
-       <p> Mapear o estado da arte da modelagem acústica “tradicional” </p> 
-       <p> Potencial de inclusão de teoria acústica na eficiência </p> 
+ <h1> Referencial Teórico </h1> 
+  <h2> Redes Neurais - Arquiteturas </h2> 
+ <figure> <img src="media/arqs.png" alt="Arquiteturas"/> </figure> 
+ <p class="caption"> Arquiteturas </p> 
+</section> 
+ 
+<section class="s5"> 
+ <h1> Referencial Teórico </h1> 
+  <h2> Transformada Discreta de Fourier </h2> 
+ <figure> <img src="media/dft.png" alt="Transformada Discreta de Fourier"/> </figure> 
+ <p class="caption"> Transformada Discreta de Fourier </p> 
+</section> 
+ 
+<section class="s6"> 
+ <h1> Referencial Teórico </h1> 
+  <h2> DFT - SIMETRIA </h2> 
+ <figure> <img src="media/simetria.png" alt="Simetria Transformada de Fourier"/> </figure> 
+ <p class="caption"> Simetria Transformada de Fourier </p> 
+</section> 
+ 
+<section class="s7"> 
+ <h1> Referencial Teórico </h1> 
+  <h2> DFT - Decaimento domínio da frequência x domínio do tempo </h2> 
+ <figure> <img src="media/fourierDecay.png" alt="Simetria Transformada de Fourier"/> </figure> 
+ <p class="caption"> Simetria Transformada de Fourier </p> 
+</section> 
+ 
+<section class="s8"> 
+ <h1> Metodologia </h1> 
+  <h2> Busca de amostras sonoras: </h2> 
+       <p> Variedade, Qualidade, Licença, Organização </p> 
+  <h2> Modelos Tradicionais </h2> 
+       <p> Implementação e análise </p> 
+  <h2> Domínio do tempo: </h2> 
+       <p> Redes Densas – Grid Search (Arquitetura, Função de ativação, Função de Otimização) </p> 
+       <p> Redes Recorrentes + Convolução alisada </p> 
+  <h2> Domínio da Frequência: </h2> 
+       <p> Busca por representações simplificadas </p> 
+       <p> Aplicação direta de redes Densas | Aplicação fisicamente informada </p> 
+</section> 
+ 
+<section class="s9"> 
+ <h1> Metodologia - Modelos Tradicionais </h1> 
+ <video controls> <source src="media/DigitalWaveguide.webm" type=video/webm> </video> 
+ <p class="caption"> Digital Waveguide </p> 
+</section> 
+ 
+<section class="s10"> 
+ <h1> Metodologia - Modelos Tradicionais </h1> 
+ <video controls> <source src="media/FiniteDifference.webm" type=video/webm> </video> 
+ <p class="caption"> Diferenças Finitas </p> 
+</section> 
+ 
+<section class="s11"> 
+ <h1> Metodologia - Domínio do tempo: </h1> 
+ <figure> <img src="media/smoothstep.png" alt="Convolução Alisada"/> </figure> 
+ <p class="caption"> Convolução Alisada </p> 
+</section> 
+ 
+<section class="s12"> 
+ <h1> Resultados - Domínio do tempo: </h1> 
+ <figure> <img src="media/descontinuidades.png" alt="Descontinuidades"/> </figure> 
+ <p class="caption"> Descontinuidades </p> 
+</section> 
+ 
+<section class="s13"> 
+ <h1> Resultados - Domínio do tempo: </h1> 
+ <audio controls> <source src="media/1-1-1.wav" type=audio/wav> </audio> 
+ <p class="caption"> Alvo </p> 
+ <audio controls> <source src="media/beating_1.0_1.0_1.0_raw.wav" type=audio/wav> </audio> 
+ <p class="caption"> Resultado </p> 
+ <audio controls> <source src="media/beating_1.0_1.0_1.0_alisado.wav" type=audio/wav> </audio> 
+ <p class="caption"> Resultado Alisado </p> 
+</section> 
+ 
+<section class="s14"> 
+ <h1> Metodologia - Domínio da Frequência: </h1> 
+       <p> Método direto para sons mal comportados </p> 
+       <p> Método fisicamente informado para sons harmônicos </p> 
+ <figure> <img src="media/crashxpiano.png" alt="Espectros de frequência: Não harmônico x harmônico"/> </figure> 
+ <p class="caption"> Espectros de frequência: Não harmônico x harmônico </p> 
+</section> 
+ 
+<section class="s15"> 
+ <h1> Metodologia - Domínio da Frequência - Método Direto: </h1> 
+       <p> caixa, contratempo,tambores - 120 008 neurons, 1.4 Mb. </p> 
+       <p> pratos - 360 008 neurons, 9 Mb. </p> 
+       <p> redes com uma camada oculta </p> 
+ <audio controls> <source src="media/caixa_centro_para_bordas.wav" type=audio/wav> </audio> 
+ <p class="caption"> Dinâmica Caixa - Centro para Borda </p> 
+ <audio controls> <source src="media/contratempo_piano_para_forte.wav" type=audio/wav> </audio> 
+ <p class="caption"> Dinâmica Contratempo - Fraco para Forte </p> 
+</section> 
+ 
+<section class="s16"> 
+ <h1> Metodologia - Domínio da Frequência - Método Fisicamente Informado: </h1> 
+ <figure> <img src="media/Peaks.png" alt="Identificação de picos"/> </figure> 
+ <p class="caption"> Identificação de picos </p> 
+ <figure> <img src="media/frequencydecay.png" alt="Identificação de decaimentos"/> </figure> 
+ <p class="caption"> Identificação de decaimentos </p> 
+       <p> Redes: amplitudes e decaimentos - 5 301 neurons, 100kb | frequências 261 neurons, 50 kb </p> 
+</section> 
+ 
+<section class="s17"> 
+ <h1> Metodologia - Domínio da Frequência - Método Fisicamente Informado: </h1> 
+ <audio controls> <source src="media/piano_1.wav" type=audio/wav> </audio> 
+ <p class="caption"> Amostra Piano - tecla 01 A0 </p> 
+ <audio controls> <source src="media/piano_49.wav" type=audio/wav> </audio> 
+ <p class="caption"> Amostra Piano - tecla 49 A4 </p> 
+ <audio controls> <source src="media/piano_88.wav" type=audio/wav> </audio> 
+ <p class="caption"> Amostra Piano - tecla 88 C8 </p> 
+</section> 
+ 
+<section class="s18"> 
+ <h1> Metodologia - Domínio da Frequência - Modelo Final: </h1> 
+ <figure> <img src="media/modelofinal.png" alt="Modelo final"/> </figure> 
+ <p class="caption"> Modelo final </p> 
+</section> 
+ 
+<section class="s19"> 
+ <h1> Resultados - Domínio da Frequência: </h1> 
+  <h2> Método Direto: </h2> 
+       <p> Funcional para sons mal comportados (percussão) </p> 
+  <h2> Método Fisicamente informado: </h2> 
+       <p> Ideal para instrumentos harmônicos </p> 
+       <p> Eficiência 10x maior do que Digital Waveguides (implementação em Python) </p> 
+       <p> Verossimilhança maior do que o método das diferenças finitas </p> 
+</section> 
+ 
+<section class="s20"> 
+ <h1> Conclusão </h1> 
+  <h2> Contribuições: </h2> 
+       <p> Apresenta um modelo mais eficiente para modelagem acústica </p> 
+       <p> Aponta uma nova área de pesquisa, na interseção entre acústica e redes neurais </p> 
+       <p> Apresenta alguns potenciais e limitações dessa área, no domínio do tempo e da frequência </p> 
+       <p> Interpretação geométrica da simetria da transformada discreta de Fourier aplicada à sinais no domínio real. </p> 
+       <p> Relação entre envelopes (domínio do tempo) e formato das elevações (domínio da frequência) </p> 
+  <h2> Oportunidades de Pesquisa: </h2> 
+       <p> Desenvolvimento de um método de extração de envelopes (possivelmente analítico) </p> 
+       <p> Retomar autoencoders com esse método (transferência de estilo) </p> 
+       <p> Utilizar Diferenças Finitas para treinar um algoritmo “Neural Waveguides” </p> 
+       <p> Utilizar ANNs no lugar de funções utilizadas em modelos acústicos mais elaborados </p> 
+       <p> Paralelizar as redes </p> 
 </section> 
  
 </body>
