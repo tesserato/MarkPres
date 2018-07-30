@@ -7,9 +7,9 @@ PROGRAMA DE PÓS-GRADUAÇÃO EM ENGENHARIA DE PRODUÇÃO
 
 **Redes Neurais Aplicadas à Modelagem de Instrumentos Acústicos para Síntese Sonora em Tempo Real**
 
-por Carlos Tarjano 
+Carlos Tarjano 
 
-Prof. Dr. Valdecy Pereira (Orientador)
+Orientador: Prof. Dr. Valdecy Pereira
 
 Niterói, 31 / 07 / 2018
 
@@ -24,7 +24,7 @@ Mapear o estado da arte da aplicação de ANNs em áreas correlatas
 
 Mapear o estado da arte da modelagem acústica “tradicional”
 
-Potencial de inclusão de teoria acústica na eficiência
+Investigar o potencial de inclusão de teoria acústica na eficiência
 
 ## Motivação:
 
@@ -58,9 +58,11 @@ Arquiteturas Neurais consolidadas na literatura
 
 ## ANNs:
 
+Alguns trabalhos experimentais na década de 1990
+
 Wavenet – bons resultados para voz (Magenta)
 
-Alguns trabalhos experimentais no princípio
+A Maioria das plicações de ANNs ocorrem em um nível mais alto de abstração
 
 ## Modelagem Acústica Tradicional:
 
@@ -75,9 +77,9 @@ Domínio do Tempo (Modelagem Física)
 ---------------
 
 
-# Referencial Teórico
+# Referencial Teórico - Redes Neurais - Arquiteturas
 
-## Redes Neurais - Arquiteturas
+
 
 ![Arquiteturas](media/arqs.png)
 
@@ -93,19 +95,17 @@ Domínio do Tempo (Modelagem Física)
 
 ---------------
 
-# Referencial Teórico
+# Referencial Teórico - DFT - SIMETRIA
 
-## DFT - SIMETRIA
+
 
 ![Simetria Transformada de Fourier](media/simetria.png)
 
 ---------------
 
+# Referencial Teórico - DFT
 
-
-# Referencial Teórico
-
-## DFT - Decaimento domínio da frequência x domínio do tempo
+Decaimento: domínio da frequência x domínio do tempo
 
 ![Simetria Transformada de Fourier](media/fourierDecay.png)
 
@@ -117,7 +117,7 @@ Domínio do Tempo (Modelagem Física)
 
 Variedade, Qualidade, Licença, Organização
 
-## Modelos Tradicionais
+## Investigação dos modelos tradicionais
 
 Implementação e análise
 
@@ -135,15 +135,23 @@ Aplicação direta de redes Densas | Aplicação fisicamente informada
 
 
 ---------------
-# Metodologia - Modelos Tradicionais
+# Metodologia - Modelos Tradicionais: Digital Waveguide
 
 ![Digital Waveguide](media/DigitalWaveguide.webm)
 
+![Amostra: 440 Hz, pluck 0.1, pick 0.1](media/DW_440_Pluck_0-1_Pick_0-1.wav)
+
+![Amostra: 440 Hz, pluck 0.5, pick 0.5](media/DW_440_Pluck_0-5_Pick_0-5.wav)
+
 ---------------
 
-# Metodologia - Modelos Tradicionais
+# Metodologia - Modelos Tradicionais: Diferenças Finitas
 
 ![Diferenças Finitas](media/FiniteDifference.webm)
+
+![Amostra: 440 Hz, pluck 0.1, pick 0.1](media/FD_440_Pluck_0-1_Pick_0-1.wav)
+
+![Amostra: 440 Hz, pluck 0.5, pick 0.5](media/FD_440_Pluck_0-5_Pick_0-5.wav)
 
 ---------------
 
@@ -214,6 +222,17 @@ Redes: amplitudes e decaimentos - 5 301 neurons, 100kb | frequências 261 neuron
 ![Modelo final](media/modelofinal.png)
 
 ---------------
+# Metodologia - Domínio da Frequência - Modelo Final:
+
+![Amostra Hibrido - posição 13 A1](media/h13.wav)
+
+![Amostra Hibrido - posição 18 D2](media/h18.wav)
+
+![Amostra Hibrido - posição 40 C4](media/h40.wav)
+
+![Amostra Hibrido - posição 88 C8](media/h88.wav)
+
+---------------
 
 # Resultados - Domínio da Frequência:
 
@@ -235,7 +254,7 @@ Verossimilhança maior do que o método das diferenças finitas
 
 ## Contribuições:
 
-Apresenta um modelo mais eficiente para modelagem acústica
+Apresenta um modelo eficiente para modelagem acústica
 
 Aponta uma nova área de pesquisa, na interseção entre acústica e redes neurais
 
@@ -249,11 +268,12 @@ Relação entre envelopes (domínio do tempo) e formato das elevações (domíni
 
 Desenvolvimento de um método de extração de envelopes (possivelmente analítico)
 
-Retomar autoencoders com esse método (transferência de estilo)
+investigar transferência de estilo fazendo uso do método acima
 
 Utilizar Diferenças Finitas para treinar um algoritmo “Neural Waveguides”
 
 Utilizar ANNs no lugar de funções utilizadas em modelos acústicos mais elaborados
 
 Paralelizar as redes
+
 ---------------

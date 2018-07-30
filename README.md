@@ -11,4 +11,4 @@ Markdown to html presentation: dead simple alternative to [Reveal.js](https://re
 
 3. Run MarkPres.py
 
-4. Self contained HTML Generated! you're welcome!
+4. Self contained HTML + css generated!

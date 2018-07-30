@@ -8,7 +8,8 @@
 <body>
 
 <div id="splash"> 
-       <p> Created with MarkPres </p>
+       <p> <b> Created with MarkPres </b> </p>
+       <p> github.com/tesserato/MarkPres </p>
        <div class="signal"></div>
 </div> 
 
@@ -18,8 +19,8 @@
        <p> ESCOLA DE ENGENHARIA </p> 
        <p> PROGRAMA DE PÓS-GRADUAÇÃO EM ENGENHARIA DE PRODUÇÃO </p> 
        <p> <b> Redes Neurais Aplicadas à Modelagem de Instrumentos Acústicos para Síntese Sonora em Tempo Real </b> </p> 
-       <p> por Carlos Tarjano </p> 
-       <p> Prof. Dr. Valdecy Pereira (Orientador) </p> 
+       <p> Carlos Tarjano </p> 
+       <p> Orientador: Prof. Dr. Valdecy Pereira </p> 
        <p> Niterói, 31 / 07 / 2018 </p> 
 </section> 
  
@@ -48,8 +49,9 @@
 <section class="s3"> 
  <h1> Revisão Bibliográfica </h1> 
   <h2> ANNs: </h2> 
+       <p> Alguns trabalhos experimentais na década de 1990 </p> 
        <p> Wavenet – bons resultados para voz (Magenta) </p> 
-       <p> Alguns trabalhos experimentais no princípio </p> 
+       <p> A Maioria das plicações de ANNs ocorrem em um nível mais alto de abstração </p> 
   <h2> Modelagem Acústica Tradicional: </h2> 
        <p> Domínio da Frequência (Modelagem Espectral) </p> 
        <p> Domínio do Tempo (Modelagem Física) </p> 
@@ -59,8 +61,7 @@
 </section> 
  
 <section class="s4"> 
- <h1> Referencial Teórico </h1> 
-  <h2> Redes Neurais - Arquiteturas </h2> 
+ <h1> Referencial Teórico - Redes Neurais - Arquiteturas </h1> 
  <figure> <img src="media/arqs.png" alt="Arquiteturas"/> </figure> 
  <p class="caption"> Arquiteturas </p> 
 </section> 
@@ -73,15 +74,14 @@
 </section> 
  
 <section class="s6"> 
- <h1> Referencial Teórico </h1> 
-  <h2> DFT - SIMETRIA </h2> 
+ <h1> Referencial Teórico - DFT - SIMETRIA </h1> 
  <figure> <img src="media/simetria.png" alt="Simetria Transformada de Fourier"/> </figure> 
  <p class="caption"> Simetria Transformada de Fourier </p> 
 </section> 
  
 <section class="s7"> 
- <h1> Referencial Teórico </h1> 
-  <h2> DFT - Decaimento domínio da frequência x domínio do tempo </h2> 
+ <h1> Referencial Teórico - DFT </h1> 
+       <p> Decaimento: domínio da frequência x domínio do tempo </p> 
  <figure> <img src="media/fourierDecay.png" alt="Simetria Transformada de Fourier"/> </figure> 
  <p class="caption"> Simetria Transformada de Fourier </p> 
 </section> 
@@ -90,7 +90,7 @@
  <h1> Metodologia </h1> 
   <h2> Busca de amostras sonoras: </h2> 
        <p> Variedade, Qualidade, Licença, Organização </p> 
-  <h2> Modelos Tradicionais </h2> 
+  <h2> Investigação dos modelos tradicionais </h2> 
        <p> Implementação e análise </p> 
   <h2> Domínio do tempo: </h2> 
        <p> Redes Densas – Grid Search (Arquitetura, Função de ativação, Função de Otimização) </p> 
@@ -101,15 +101,23 @@
 </section> 
  
 <section class="s9"> 
- <h1> Metodologia - Modelos Tradicionais </h1> 
+ <h1> Metodologia - Modelos Tradicionais: Digital Waveguide </h1> 
  <video controls> <source src="media/DigitalWaveguide.webm" type=video/webm> </video> 
  <p class="caption"> Digital Waveguide </p> 
+ <audio controls> <source src="media/DW_440_Pluck_0-1_Pick_0-1.wav" type=audio/wav> </audio> 
+ <p class="caption"> Amostra: 440 Hz, pluck 0.1, pick 0.1 </p> 
+ <audio controls> <source src="media/DW_440_Pluck_0-5_Pick_0-5.wav" type=audio/wav> </audio> 
+ <p class="caption"> Amostra: 440 Hz, pluck 0.5, pick 0.5 </p> 
 </section> 
  
 <section class="s10"> 
- <h1> Metodologia - Modelos Tradicionais </h1> 
+ <h1> Metodologia - Modelos Tradicionais: Diferenças Finitas </h1> 
  <video controls> <source src="media/FiniteDifference.webm" type=video/webm> </video> 
  <p class="caption"> Diferenças Finitas </p> 
+ <audio controls> <source src="media/FD_440_Pluck_0-1_Pick_0-1.wav" type=audio/wav> </audio> 
+ <p class="caption"> Amostra: 440 Hz, pluck 0.1, pick 0.1 </p> 
+ <audio controls> <source src="media/FD_440_Pluck_0-5_Pick_0-5.wav" type=audio/wav> </audio> 
+ <p class="caption"> Amostra: 440 Hz, pluck 0.5, pick 0.5 </p> 
 </section> 
  
 <section class="s11"> 
@@ -179,6 +187,18 @@
 </section> 
  
 <section class="s19"> 
+ <h1> Metodologia - Domínio da Frequência - Modelo Final: </h1> 
+ <audio controls> <source src="media/h13.wav" type=audio/wav> </audio> 
+ <p class="caption"> Amostra Hibrido - posição 13 A1 </p> 
+ <audio controls> <source src="media/h18.wav" type=audio/wav> </audio> 
+ <p class="caption"> Amostra Hibrido - posição 18 D2 </p> 
+ <audio controls> <source src="media/h40.wav" type=audio/wav> </audio> 
+ <p class="caption"> Amostra Hibrido - posição 40 C4 </p> 
+ <audio controls> <source src="media/h88.wav" type=audio/wav> </audio> 
+ <p class="caption"> Amostra Hibrido - posição 88 C8 </p> 
+</section> 
+ 
+<section class="s20"> 
  <h1> Resultados - Domínio da Frequência: </h1> 
   <h2> Método Direto: </h2> 
        <p> Funcional para sons mal comportados (percussão) </p> 
@@ -188,17 +208,17 @@
        <p> Verossimilhança maior do que o método das diferenças finitas </p> 
 </section> 
  
-<section class="s20"> 
+<section class="s21"> 
  <h1> Conclusão </h1> 
   <h2> Contribuições: </h2> 
-       <p> Apresenta um modelo mais eficiente para modelagem acústica </p> 
+       <p> Apresenta um modelo eficiente para modelagem acústica </p> 
        <p> Aponta uma nova área de pesquisa, na interseção entre acústica e redes neurais </p> 
        <p> Apresenta alguns potenciais e limitações dessa área, no domínio do tempo e da frequência </p> 
        <p> Interpretação geométrica da simetria da transformada discreta de Fourier aplicada à sinais no domínio real. </p> 
        <p> Relação entre envelopes (domínio do tempo) e formato das elevações (domínio da frequência) </p> 
   <h2> Oportunidades de Pesquisa: </h2> 
        <p> Desenvolvimento de um método de extração de envelopes (possivelmente analítico) </p> 
-       <p> Retomar autoencoders com esse método (transferência de estilo) </p> 
+       <p> investigar transferência de estilo fazendo uso do método acima </p> 
        <p> Utilizar Diferenças Finitas para treinar um algoritmo “Neural Waveguides” </p> 
        <p> Utilizar ANNs no lugar de funções utilizadas em modelos acústicos mais elaborados </p> 
        <p> Paralelizar as redes </p> 

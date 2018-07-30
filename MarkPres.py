@@ -8,7 +8,8 @@ html = '''<!DOCTYPE html>
 <body>
 
 <div id="splash"> 
-       <p> Created with MarkPres </p>
+       <p> <b> Created with MarkPres </b> </p>
+       <p> github.com/tesserato/MarkPres </p>
        <div class="signal"></div>
 </div> 
 

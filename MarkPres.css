@@ -23,6 +23,7 @@
   --font_multiplier_18:1.0;
   --font_multiplier_19:1.0;
   --font_multiplier_20:1.0;
+  --font_multiplier_21:1.0;
 }
 .s0 {
   font-size: calc(var(--font_multiplier_0) * 1vw);
@@ -232,6 +233,16 @@
 }
 .s20>p {
   text-indent: calc(var(--font_multiplier_20) * 2vw);
+}
+
+.s21 {
+  font-size: calc(var(--font_multiplier_21) * 1vw);
+}
+.s21>h1, .s21>h2, .s21>h3, .s21>h4, .s21>h5, .s21>h6 {
+  text-indent: calc(var(--font_multiplier_21) * 1vw);
+}
+.s21>p {
+  text-indent: calc(var(--font_multiplier_21) * 2vw);
 }
 
 
