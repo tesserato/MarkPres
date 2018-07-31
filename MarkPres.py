@@ -97,8 +97,7 @@ save = open(markdown_path.replace("md","html"), 'w', encoding='utf8').writelines
 
 css = '''
 :root{
-  --background_color: #2D3235;
-  --foreground_color: #202426;'''
+  --background_color: #2D3235;'''
 
 for i in range(ctr):
   css+= "\n  --font_multiplier_" + str(i) + ":1.0;"
@@ -184,6 +183,9 @@ img, video, audio{
 }
 
 @media print{
+  @page {
+    size: 297mm 210mm;
+  }
   section{
     page-break-after: always;
   }

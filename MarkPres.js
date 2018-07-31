@@ -10,6 +10,7 @@ var n = slides.length;
 /* <><><><> FUNCTIONS <><><><> */
 
 function recalculate(){
+  console.log('recalculate');
   for (i = 0; i < n; i++) {
     slides[i].style.display = "block";
     FontMultiplier = 0.0;
@@ -90,17 +91,14 @@ document.body.appendChild(r_div);
 /* <><><><> EVENTS <><><><> */
 
 window.onresize = function(){
-  // loading.style.visibility = "visible";
-  recalculate();
-  // loading.style.visibility = "hidden";
-  if (printing == true){
-    for (i = 0; i < n; i++) {
-      slides[i].style.display = "block";
+  console.log('onresize');
+  if (printing == false){
+    recalculate();
     }
-  }
 }
 
 window.onload = function(){
+  console.log('onload');
   recalculate();
   loading.style.visibility = "hidden";
 }
@@ -115,27 +113,24 @@ document.onkeydown = function(e){
 }
 
 window.onbeforeprint = function() {
+  console.log('onbeforeprint');
   printing = true;
   for (i = 0; i < n; i++) {
     slides[i].style.display = "block";
+    // slides[i].clientWidth = 842;
     FontMultiplier = 0.0;
     document.documentElement.style.setProperty("--font_multiplier_" + i, FontMultiplier);
-    while (slides[i].clientHeight < ((210 - 5) * 72) / 25.4 || slides[i].clientHeight < ((297 - 5) * 72) / 25.4){
-      FontMultiplier += 0.01
+    while (slides[i].clientHeight < (210 + 2) * 96 / 25.4) {
+      FontMultiplier += 0.1
       document.documentElement.style.setProperty("--font_multiplier_" + i, FontMultiplier);
     }
     FontMultiplier -= FontSteps
     document.documentElement.style.setProperty("--font_multiplier_" + i, FontMultiplier);
-    slides[i].style.display = "none";
-  slides[CurrentSlide].style.display = "block";
-  }
-  
-  for (i = 0; i < n; i++) {
-    slides[i].style.display = "block";
   }
 };
 
 window.onafterprint = function() {
+  console.log('onafterprint');
   printing = false;
   recalculate();
   for (i = 0; i < n; i++) {

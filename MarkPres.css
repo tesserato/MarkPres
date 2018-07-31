@@ -1,7 +1,6 @@
 
 :root{
   --background_color: #2D3235;
-  --foreground_color: #202426;
   --font_multiplier_0:1.0;
   --font_multiplier_1:1.0;
   --font_multiplier_2:1.0;
@@ -310,6 +309,9 @@ img, video, audio{
 }
 
 @media print{
+  @page {
+    size: 297mm 210mm;
+  }
   section{
     page-break-after: always;
   }

@@ -107,7 +107,7 @@ Domínio do Tempo (Modelagem Física)
 
 Decaimento: domínio da frequência x domínio do tempo
 
-![Simetria Transformada de Fourier](media/fourierDecay.png)
+![Decaimentos: ondas simples e compostas](media/fourierDecay.png)
 
 ---------------
 
