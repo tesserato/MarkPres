@@ -1,1 +1,3 @@
-pandoc presentation.md -o presentation.pptx
+pandoc presentation.html -o presentation.pptx
+
+pause
